@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Solut93 {
+public class Solution93 {
 
     public static List<String> restoreIpAddresses(String s) {
         if (s.length() > 12 || s.length() < 4) {//如果s长度大于12或者小于4 则不能组成ip地址，返回空
