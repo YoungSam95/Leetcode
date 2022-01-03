@@ -27,7 +27,7 @@ public class Solution128 {
         }
 
         int pre, after, max = 0;
-        for (int num : nums) {
+        /*for (int num : nums) {
             int temp = 1;
             set.remove(num);
 
@@ -47,6 +47,17 @@ public class Solution128 {
             max = Math.max(max, temp);
             if (max > nums.length / 2) {
                 return max;
+            }
+        }*/
+
+        for(int num : set){
+            if(!set.contains(num - 1)){
+                int tempMax = 1;
+                int tempNum = num;
+                while(set.contains(++tempNum)){
+                    tempMax++;
+                }
+                max = Math.max(max,tempMax);
             }
         }
 
