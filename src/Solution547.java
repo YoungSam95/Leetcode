@@ -9,6 +9,7 @@
 public class Solution547 {
 
     public static int findCircleNum(int[][] isConnected) {
+        
         int citys = isConnected.length;//城市数量
         boolean[] visited = new boolean[citys];//城市是否被遍历过
         int provinces = 0;//省份个数
@@ -19,9 +20,11 @@ public class Solution547 {
             }
         }
         return provinces;
+
     }
 
     public static void dfs(int[][] isConnected, boolean[] visited, int citys, int i) {
+
         for (int j = 0; j < citys; j++) {
             if (isConnected[i][j] == 1 && !visited[j]) {//如果当前城市和主体中的城市联通且还没遍历过，标记遍历，并以
                 visited[j] = true;                      //当前城市为主体深度搜索
@@ -34,8 +37,8 @@ public class Solution547 {
     public static void main(String[] args){
 
         int[][] m = {{1,1,0},{1,1,0},{0,0,1}};
-        //int[][] n = {{1,1,0},{1,1,1},{0,1,1}};
+        int[][] n = {{1,1,0},{1,1,1},{0,1,1}};
         System.out.println(findCircleNum(m));
-        //System.out.println(findCircleNum(n));
+        System.out.println(findCircleNum(n));
     }
 }
