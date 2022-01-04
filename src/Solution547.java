@@ -9,7 +9,7 @@
 public class Solution547 {
 
     public static int findCircleNum(int[][] isConnected) {
-        
+
         int citys = isConnected.length;//城市数量
         boolean[] visited = new boolean[citys];//城市是否被遍历过
         int provinces = 0;//省份个数
