@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 /**
@@ -16,20 +17,23 @@ public class Solution56 {
     public static int[][] merge(int[][] intervals){
 
         LinkedList<int[]> res = new LinkedList<>();
-        // 按区间的 start 升序排列
-        Arrays.sort(intervals, (a, b) -> {
+        //按区间start升序排列
+        Arrays.sort(intervals, (a,b) -> {
             return a[0] - b[0];
         });
+        /*Arrays.sort(intervals, new Comparator<int[]>() {
+            public int compare(int[] interval1, int[] interval2) {
+                return interval1[0] - interval2[0];
+            }
+        });*/
+
         res.add(intervals[0]);
-        for (int i = 1; i < intervals.length; i++) {
-            int[] curr = intervals[i];
-            // res 中最后一个元素的引用
-            int[] last = res.getLast();
-            if (curr[0] <= last[1]) {
-                last[1] = Math.max(last[1], curr[1]);
-            } else {
-                // 处理下一个待合并区间
-                res.add(curr);
+        for(int i = 1; i < intervals.length; i++ ){
+            int[] last = res.getLast();//得到res中最后一个int[]的引用
+            if(intervals[i][0] <= last[1]){//如果当前intervals[i]的start<=last[1]，找出最大的end替换last[1]
+                last[1] = Math.max(last[1],intervals[i][1]);
+            }else {
+                res.add(intervals[i]);//如果不是就将当前的intervals加入到结果中
             }
         }
         return res.toArray(new int[0][0]);
@@ -38,7 +42,7 @@ public class Solution56 {
 
     public static void main(String[] args){
 
-        int[][] intercals = {{1,3},{2,6},{8,10},{15,18}};
+        int[][] intercals = {{2,6},{1,3},{8,10},{15,18}};
         intercals = merge(intercals);
         for(int i = 0; i < intercals.length; i++){
             for(int j = 0; j < intercals[i].length; j++){
