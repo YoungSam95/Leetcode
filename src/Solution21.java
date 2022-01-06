@@ -1,11 +1,9 @@
-import org.w3c.dom.NodeList;
-
 /**
  * 21 合并两个有序链表
  */
 public class Solution21 {
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
         ListNode() {}
