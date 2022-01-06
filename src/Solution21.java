@@ -16,22 +16,21 @@ public class Solution21 {
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
         ListNode dummy = new ListNode(-1), p = dummy;
-        ListNode p1 = list1, p2 = list2;
-        while (p1 != null && p2 != null) {
+        while (list1 != null && list2 != null) {
             // 比较 p1 和 p2 两个指针
             // 将值较小的的节点接到 p 指针
-            if (p1.val > p2.val) {
-                p.next = p2;
-                p2 = p2.next;
+            if (list1.val > list2.val) {
+                p.next = list2;
+                list2 = list2.next;
             } else {
-                p.next = p1;
-                p1 = p1.next;
+                p.next = list1;
+                list1 = list1.next;
             }
             // p 指针不断前进
             p = p.next;
         }
-        if (p1 != null) p.next = p1;
-        if (p2 != null) p.next = p2;
+        if (list1 != null) p.next = list1;
+        if (list2 != null) p.next = list2;
 
         return dummy.next;
 
