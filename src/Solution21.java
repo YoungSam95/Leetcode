@@ -12,7 +12,7 @@ public class Solution21 {
     }
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-
+        if(list1 == null || list2 == null) return list1 != null ? list1 : list2;
         ListNode dummy = new ListNode(-1), p = dummy;
         ListNode p1 = list1, p2 = list2;
         while (p1 != null && p2 != null) {
