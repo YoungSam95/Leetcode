@@ -39,9 +39,9 @@ public class Solution46 {
 
     public static void main(String[] args){
 
-        int[] nums = {1,2,3,4};
+        int[] nums = {1,2,3};
         List<List<Integer>> res = permute(nums);
-        System.out.print("[1,2,3,4]的全排列共有" + res.size() + "种，分别是");
+        System.out.print("[1,2,3]的全排列共有" + res.size() + "种，分别是");
         System.out.print(res);
     }
 }

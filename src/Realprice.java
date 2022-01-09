@@ -9,9 +9,10 @@ public class Realprice {
     public static void main(String[] args) {
         Scanner cin=new Scanner(System.in);
         int num=cin.nextInt();
-        int co;
+        int co;//余数，记录每一位
         int sum=0;
         int h=1;
+        //作为9进制计算
         while (num>0)
         {
             co=num%10;
