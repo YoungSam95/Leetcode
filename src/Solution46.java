@@ -10,26 +10,47 @@ public class Solution46 {
 
     public static List<List<Integer>> permute(int[] nums) {
 
-        List<List<Integer>> res = new LinkedList<List<Integer>>();
+        /*List<List<Integer>> res = new LinkedList<List<Integer>>();
         permute(nums,0,res);
+        return res;*/
+
+        List<List<Integer>> res  = new LinkedList<List<Integer>>();
+        LinkedList<Integer> track = new LinkedList<>();
+        backTrac(nums,track,res);
         return res;
+    }
+
+    public static void backTrac(int[] nums,LinkedList track,List<List<Integer>> res){
+        if(track.size() == nums.length){
+            res.add(new LinkedList<>(track));
+            return;
+        }
+        for(int i = 0; i < nums.length; i++){
+            if(track.contains(nums[i]))
+                continue;
+            track.add(nums[i]);
+            backTrac(nums,track,res);
+            track.removeLast();
+        }
     }
 
     public static void permute(int[] nums,int start,List<List<Integer>> res){
 
-        if(start == nums.length - 1){
+        /*if(start == nums.length - 1){
             List<Integer> list = new LinkedList<Integer>();
             for(int i = 0;i < nums.length;i++){
                 list.add(nums[i]);
             }
             res.add(list);
+            return;
         }
         for(int i = start;i < nums.length;i++){
             swap(nums,start,i);
             permute(nums,start + 1,res);
             swap(nums,start,i);
-        }
+        }*/
     }
+
     private static void swap(int[] nums, int i, int j){
 
         int tmp = nums[i];
