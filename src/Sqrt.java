@@ -22,9 +22,23 @@ public class Sqrt {
 
         return right;
     }
-
+    public static final String A = "ab";
     public static void main(String[] args){
 
-        System.out.println(mySqrt(8));
+        //System.out.println(mySqrt(8));
+        String s = "ab";
+        String a = "a";
+        String b = "b";
+        String c = a + b;//ab为引用不是字符串常量，不会在编译期确定 String是final的所以创建了一个新的对向然后把引用传给c
+        String d = new String("ab");
+        String e = "a" + "b";
+        System.out.println(A == s);
+        System.out.println(A == c);
+        System.out.println(A == s.intern());
+        System.out.println(A == c.intern());
+        System.out.println(A == d);
+        System.out.println(s == d);
+        System.out.println(s == e);
+        System.out.println(A == e);
     }
 }
