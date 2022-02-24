@@ -3,24 +3,12 @@ package leetcode;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import common.TreeNode;
 
 /**
  * 103. 二叉树的锯齿形层序遍历
  */
 public class Solution103 {
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 
     public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
 
