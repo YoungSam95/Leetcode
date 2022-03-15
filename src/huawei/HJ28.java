@@ -2,6 +2,9 @@ package huawei;
 
 import java.util.*;
 
+/**
+ * 先到先得，能让就让
+ */
 public class HJ28 {
 
     public static void main(String[] args) {
@@ -18,9 +21,9 @@ public class HJ28 {
 
             for (int i = 0; i < n; i++) {
                 if ((arr[i] & 1) == 1) {
-                    evens.add(arr[i]);
-                } else {
                     odds.add(arr[i]);
+                } else {
+                    evens.add(arr[i]);
                 }
             }
             int[] evensMatch = new int[evens.size()];
@@ -52,7 +55,7 @@ public class HJ28 {
         for (int i = 0; i < evens.size(); i++) {
             if (isPrime(num + evens.get(i)) && used[i] == 0) {
                 used[i] = 1;
-                if (evensMatch[i] == 0 || find(used, evens, evensMatch[i], evensMatch)) {
+                if (evensMatch[i] == 0 || find(used, evens, evensMatch[i], evensMatch)) {//能让就让
                     evensMatch[i] = num;
                     return true;
                 }
