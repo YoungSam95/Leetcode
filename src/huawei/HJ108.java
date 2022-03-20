@@ -8,7 +8,7 @@ public class HJ108 {
         while (sc.hasNext()) {
             int a = sc.nextInt();
             int b = sc.nextInt();
-            int c = 2;
+            int c = 1;
             int max = Math.max(a,b);
             int res = Math.max(a,b);
             while(!(res%a == 0 && res%b ==0)){
