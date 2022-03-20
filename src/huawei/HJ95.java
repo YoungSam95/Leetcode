@@ -35,7 +35,7 @@ public class HJ95 {
                 if (i == tmp[0].length()) {
                     break;
                 }
-                if (j % 4 != 3) {
+                if (j % 4 != 3) {//后面都是0的情况在上一步break排除，其余的0若不是刚好位于万位就加零
                     sb.append("零");
                 }
                 i--;
