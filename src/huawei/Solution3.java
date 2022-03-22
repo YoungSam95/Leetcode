@@ -1,5 +1,6 @@
+package huawei;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,6 +10,7 @@ public class Solution3 {
     public static List<String> res;
     public static int n;
     public static StringBuilder sb;
+
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);

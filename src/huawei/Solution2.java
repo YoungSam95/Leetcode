@@ -1,3 +1,5 @@
+package huawei;
+
 import java.util.Scanner;
 
 public class Solution2 {
