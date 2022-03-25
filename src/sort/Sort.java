@@ -1,3 +1,5 @@
+package sort;
+
 public class Sort {
 
     //冒泡排序
