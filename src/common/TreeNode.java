@@ -26,6 +26,7 @@ public class TreeNode {
             String left = nodes[i++];
             if(!left.equals("null")){
                 parent.left = new TreeNode(Integer.parseInt(left));
+                q.offer(parent.left);
             }else{
                 parent.left = null;
             }
@@ -33,6 +34,7 @@ public class TreeNode {
             String right = nodes[i++];
             if(!right.equals("null")){
                 parent.right = new TreeNode(Integer.parseInt(right));
+                q.offer(parent.right);
             }else{
                 parent.right = null;
             }
