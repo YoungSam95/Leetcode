@@ -15,4 +15,8 @@ public class Solution357 {
         }
         return res;
     }
+    public static void main(String[] args){
+        System.out.println(Integer.valueOf(1));
+        System.out.println(Integer.valueOf("1"));
+    }
 }
