@@ -6,7 +6,7 @@ package leetcode;
 public class Solution821 {
     public int[] shortestToChar(String s, char c) {
         int[] res = new int[s.length()];
-        for(int i = 0; i < s.length(); i++){
+        /*for(int i = 0; i < s.length(); i++){
             int pre = i;
             int after = i;
             while(pre >=0 || after < s.length()){
@@ -21,6 +21,14 @@ public class Solution821 {
                 if(pre > 0) pre--;
                 if(after < s.length() - 1) after++;
             }
+        }*/
+        for(int i = 0, index = -s.length(); i < s.length(); i++){
+            if(s.charAt(i) == c) index = i;
+            res[i] = i - index;
+        }
+        for(int i = s.length() - 1, index = 2*s.length(); i >= 0; i--){
+            if(s.charAt(i) == c) index = i;
+            res[i] = Math.min(index - i,res[i]);
         }
         return res;
     }
