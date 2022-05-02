@@ -4,7 +4,7 @@ public class Sort {
 
     //冒泡排序
     public  static void bubbleSort(int[] arr){
-        for(int i = 0;i < arr.length;i++){
+        for(int i = 0;i < arr.length - 1;i++){
             for(int j = 0;j < arr.length-i-1;j++){
                 if(arr[j] > arr[j+1]){
                     int temp = arr[j];
@@ -21,7 +21,7 @@ public class Sort {
         for(int i = 0;i < arr.length - 1;i++){
             int min = i;
             for(int j = i + 1;j < arr.length;j++){
-                if(arr[j] < arr[i]){
+                if(arr[j] < arr[min]){
                     min = j;
                 }
             }
@@ -92,7 +92,7 @@ public class Sort {
         int[] nums = {3,2,1,5,6,4};
         //quickSort(nums,0,5);
         //selectSort((nums));
-        mergeSort(nums);
+        bubbleSort(nums);
         for(int c : nums){
             System.out.println(c);
         }
