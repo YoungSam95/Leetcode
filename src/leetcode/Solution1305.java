@@ -24,12 +24,4 @@ public class Solution1305 {
         travel(root.left,res);
         travel(root.right,res);
     }
-    public static void main(String[] args){
-        String[] node1 = {"2","1","4"};
-        String[] node2 = {"1","0","3"};
-        TreeNode root1 = new TreeNode().deserialize(node1);
-        TreeNode root2 = new TreeNode().deserialize(node2);
-        List<Integer> res = getAllElements(root1,root2);
-        System.out.println(res.toString());
-    }
 }

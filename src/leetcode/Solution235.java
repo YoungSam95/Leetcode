@@ -24,10 +24,4 @@ public class Solution235 {
         //此时min<= root.val <= max,则当前root为最近公共祖先
         return root;
     }
-
-    public static void main(String[] args){
-        String[] str = {"6","2","8","0","4","7","9","null","null","3","5"};
-        TreeNode root = new TreeNode().deserialize(str);
-        System.out.println(lowestCommonAncestor(root,7,8).val);
-    }
 }

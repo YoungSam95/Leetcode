@@ -22,9 +22,4 @@ public class Solution101 {
         return check(left.right,right.left) && check(left.left,right.right);
     }
 
-    public static void main(String[] args){
-        String[] nodes = {"1","2","2","3","4","4","3"};
-        TreeNode root = new TreeNode().deserialize(nodes);
-        System.out.println(isSymmetric(root));
-    }
 }

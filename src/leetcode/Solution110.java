@@ -23,9 +23,4 @@ public class Solution110 {
         }
         return 1 + Math.max(leftMaxDepth, rightMaxDepth);
     }
-    public static void main(String[] args){
-        String[] nodes = {"3","9","20","null","null","15","7"};
-        TreeNode root = new TreeNode().deserialize(nodes);
-        System.out.println(isBalanced(root));
-    }
 }

@@ -38,8 +38,9 @@ public class TreeNode {
 
         return sb.toString();
     }
-    public TreeNode deserialize(String[] nodes){
-        if(nodes.length == 0) return null;
+    public TreeNode deserialize(String data){
+        if (data.isEmpty()) return null;
+        String[] nodes = data.split(",");
         TreeNode root = new TreeNode(Integer.parseInt(nodes[0]));
         Queue<TreeNode> q = new LinkedList<>();
         q.offer(root);
