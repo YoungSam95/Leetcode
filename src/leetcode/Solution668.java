@@ -8,15 +8,15 @@ public class Solution668 {
     public int findKthNumber(int m, int n, int k) {
         int left = 1, right = m * n;
         while (left < right) {
-            int x = left + (right - left) / 2;
-            int count = x / n * n;
-            for (int i = x / n + 1; i <= m; ++i) {
-                count += x / i;
+            int mid = left + (right - left) / 2;
+            int count = 0;
+            for (int i = 1; i <= m; ++i) {
+                count += Math.min(mid / i, n);
             }
             if (count >= k) {
-                right = x;
+                right = mid;
             } else {
-                left = x + 1;
+                left = mid + 1;
             }
         }
         return left;
