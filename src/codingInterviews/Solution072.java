@@ -3,7 +3,7 @@ package codingInterviews;
 /**
  * 剑指 Offer II 072. 求平方根  只保留整数部分
  */
-public class Sqrt {
+public class Solution072 {
 
     public static int mySqrt(int x) {
         //查找区间为 [1, x / 2 + 1]
