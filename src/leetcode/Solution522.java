@@ -1,35 +1,41 @@
 package leetcode;
 
+import java.util.Arrays;
+
 /**
  * 522. 最长特殊序列 II
  */
 public class Solution522 {
     public int findLUSlength(String[] strs) {
-        int n = strs.length, ans = -1;
+        Arrays.sort(strs, (a,b) -> b.length() - a.length());
+        int n = strs.length;
         for(int i = 0; i < n; i++){
-            if(strs[i].length() <= ans) continue;
-            boolean isSpecial = true;
-            for(int j = 0; j < n; j++){
-                if(i == j) continue;
-                if(check(strs[i],strs[j])) isSpecial = false;
-            }
-            if(isSpecial) ans = strs[i].length();
+            if(!isSub(strs,i)) return strs[i].length();
         }
-        return ans;
+        return -1;
     }
 
-    public boolean check(String s1, String s2) {
-        int n = s1.length(), m = s2.length();
-        if (m < n) return false;
-        int[][] f = new int[n + 1][m + 1];
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= m; j++) {
-                f[i][j] = s1.charAt(i - 1) == s2.charAt(j - 1) ? f[i - 1][j - 1] + 1 : f[i - 1][j - 1];
-                f[i][j] = Math.max(f[i][j], f[i - 1][j]);
-                f[i][j] = Math.max(f[i][j], f[i][j - 1]);
-                if (f[i][j] == n) return true;
-            }
+    public boolean isSub(String[] strs, int index) {
+        for(int i = 0; i < strs.length; i++){
+            if(i == index) continue;
+            if(strs[i].length() < strs[index].length()) break;
+            if(check(strs[index],strs[i])) return true;
         }
         return false;
     }
+
+    public boolean check(String s1, String s2) {
+        int p1 = 0, p2 = 0;
+        while(p1 < s1.length() && p2 < s2.length()){
+            while(p2 < s2.length() && s2.charAt(p2) != s1.charAt(p1)){
+                p2++;
+            }
+            if(p2 < s2.length()){
+                p1++;
+            }
+            p2++;
+        }
+        return p1 == s1.length();
+    }
+
 }
