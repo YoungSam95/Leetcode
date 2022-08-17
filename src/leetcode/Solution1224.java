@@ -37,4 +37,29 @@ public class Solution1224 {
         }
         return res;
     }
+
+    public int maxEqualFreq2(int[] nums) {
+        Map<Integer,Integer> count = new HashMap<>();//记录每个num出现的次数
+        int res = 0, maxFreq = 0, count1 = 0, countMax = 0;//maxFreq记录最大出现次数,count1记录出现1次的数的个数，countMax记录出现maxFreq的数的个数
+        for(int i = 0; i < nums.length; i++){
+            count.put(nums[i],count.getOrDefault(nums[i],0) + 1);
+            if(count.get(nums[i]) == 1){
+                count1++;
+            }else if(count.get(nums[i]) == 2){
+                count1--;
+            }
+            if(count.get(nums[i]) == maxFreq + 1){
+                maxFreq++;
+                countMax = 1;
+            }else if(count.get(nums[i]) == maxFreq){
+                countMax++;
+            }
+            if(maxFreq == 1 || //最大次数都是1，随便删一个
+               count.size() * (maxFreq - 1) == i && countMax == 1 || //一个数出现maxFreq次，其他数出现maxFreq-1次
+               (count.size() - 1) * maxFreq == i && count1 == 1) {//一个数出现1次，其余所有数出现maxFreq次
+                res = i + 1;
+            }
+        }
+        return res;
+    }
 }
