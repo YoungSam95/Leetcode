@@ -4,6 +4,7 @@ import common.TreeNode;
 
 /**
  * 654.最大二叉树
+ * count = 2;
  */
 public class Solution654 {
     public TreeNode constructMaximumBinaryTree(int[] nums) {
