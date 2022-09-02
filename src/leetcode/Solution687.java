@@ -38,7 +38,7 @@ public class Solution687 {
         return  1 + Math.max(leftLen, rightLen);
     }
     public static void main(String[] args){
-        String node = "1,4,5,4,4,null,5";
+        String node = "5,5,null,5,5";
         TreeNode root = new TreeNode().deserialize(node);
         System.out.println(new Solution687().longestUnivaluePath(root));
     }
