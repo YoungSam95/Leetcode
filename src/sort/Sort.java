@@ -35,20 +35,22 @@ public class Sort {
 
     //快速排序
     public static void quickSort(int[] arr,int left,int right){
-        if(left > right){
+        if(left >= right){
             return;
         }
-        int L = left,R=right,base = arr[L];
+        int L = left, R=right, base = arr[left];
         while(L<R){
             while(base<=arr[R] && L<R){
                 R--;
             }
-            arr[L] = arr[R];
             while(base>=arr[L] && L<R){
                 L++;
             }
+            int temp = arr[R];
             arr[R] = arr[L];
+            arr[L] = temp;
         }
+        arr[left] = arr[L];
         arr[L] = base;
         quickSort(arr,left,L-1);
         quickSort(arr,R+1,right);
@@ -89,10 +91,8 @@ public class Sort {
     }
 
     public static void main(String[] args){
-        int[] nums = {3,2,1,5,6,4};
-        //quickSort(nums,0,5);
-        //selectSort((nums));
-        bubbleSort(nums);
+        int[] nums = {9,4,6,8,3,10,10,6,9};
+        quickSort(nums,0,8);
         for(int c : nums){
             System.out.println(c);
         }
