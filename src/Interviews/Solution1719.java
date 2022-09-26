@@ -1,5 +1,8 @@
 package Interviews;
 
+/**
+ * 面试题 17.19. 消失的两个数字
+ */
 public class Solution1719 {
     public int[] missingTwo(int[] nums) {
         int n = nums.length + 2;
