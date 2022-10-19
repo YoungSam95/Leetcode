@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
 
 /**
  * 1700. 无法吃午餐的学生数量
