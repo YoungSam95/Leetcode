@@ -1,6 +1,7 @@
 package leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -27,5 +28,31 @@ public class Solution1235 {
             if (list.get(r)[1] <= a) f[i] = Math.max(f[i], f[r + 1] + c);
         }
         return f[n];
+    }
+    public int jobScheduling1(int[] startTime, int[] endTime, int[] profit) {
+        int n = startTime.length;
+        int[][] jobs = new int[n][];
+        for(int i = 0; i < n; i++){
+            jobs[i] = new int[]{startTime[i], endTime[i], profit[i]};
+        }
+        Arrays.sort(jobs,(a,b) -> a[1] - b[1]);
+        int[] dp = new int[n + 1];
+        for(int i = 1; i <= n; i++){
+            int pre = 0;
+            for(int j = i - 2; j >= 0; j--){
+                if(jobs[j][1] <= jobs[i - 1][0]){
+                    pre = j + 1;
+                    break;
+                }
+            }
+            dp[i] = Math.max(dp[i - 1],dp[pre] + jobs[i - 1][2]);
+        }
+        return dp[n];
+    }
+    public static void main(String[] args){
+        int[] startTime = {1,1,1};
+        int[] endTime = {2,3,4};
+        int[] profit = {5,6,4};
+        System.out.println(new Solution1235().jobScheduling1(startTime,endTime,profit));
     }
 }
