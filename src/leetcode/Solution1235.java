@@ -11,24 +11,32 @@ import java.util.List;
 public class Solution1235 {
     public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
         int n = startTime.length;
-        List<int[]> list = new ArrayList<>();
-        for (int i = 0; i < n; i++) list.add(new int[]{startTime[i], endTime[i], profit[i]});
-        Collections.sort(list, (a, b)->a[1] - b[1]);
-        int[] f = new int[n + 10];
-        for (int i = 1; i <= n; i++) {
-            int[] info = list.get(i - 1);
-            int a = info[0], b = info[1], c = info[2];
-            f[i] = Math.max(f[i - 1], c);
-            int l = 0, r = i - 1;
-            while (l < r) {
-                int mid = l + r + 1 >> 1;
-                if (list.get(mid)[1] <= a) l = mid;
-                else r = mid - 1;
-            }
-            if (list.get(r)[1] <= a) f[i] = Math.max(f[i], f[r + 1] + c);
+        int[][] jobs = new int[n][];
+        for (int i = 0; i < n; i++) {
+            jobs[i] = new int[]{startTime[i], endTime[i], profit[i]};
         }
-        return f[n];
+        Arrays.sort(jobs, (a, b) -> a[1] - b[1]);
+        int[] dp = new int[n + 1];
+        for (int i = 1; i <= n; i++) {
+            int k = binarySearch(jobs, i - 1, jobs[i - 1][0]);
+            dp[i] = Math.max(dp[i - 1], dp[k] + jobs[i - 1][2]);
+        }
+        return dp[n];
     }
+
+    public int binarySearch(int[][] jobs, int right, int target) {
+        int left = 0;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (jobs[mid][1] > target) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+
     public int jobScheduling1(int[] startTime, int[] endTime, int[] profit) {
         int n = startTime.length;
         int[][] jobs = new int[n][];
@@ -49,10 +57,11 @@ public class Solution1235 {
         }
         return dp[n];
     }
+
     public static void main(String[] args){
-        int[] startTime = {1,1,1};
-        int[] endTime = {2,3,4};
-        int[] profit = {5,6,4};
-        System.out.println(new Solution1235().jobScheduling1(startTime,endTime,profit));
+        int[] startTime = {1,2,3,3};
+        int[] endTime = {3,4,5,6};
+        int[] profit = {50,10,40,70};
+        System.out.println(new Solution1235().jobScheduling(startTime,endTime,profit));
     }
 }
