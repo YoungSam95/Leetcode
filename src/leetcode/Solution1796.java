@@ -1,9 +1,5 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 /**
  * 1796. 字符串中第二大的数字
  */
