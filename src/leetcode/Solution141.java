@@ -1,19 +1,13 @@
 package leetcode;
 
+import common.ListNode;
+
 /**
  * 141.环形链表Ⅰ
  *     思路：用两个指针，一个跑得快，一个跑得慢。如果不含有环，跑得快的那个指针最终会遇到 null，说明链表不含环；如果含有环，快指针最终会超慢指针一圈，和慢指针相遇，说明链表含有环。
+ *     第二次
  */
 public class Solution141 {
-
-     private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-     }
 
     public static boolean hasCycle(ListNode head) {
 
