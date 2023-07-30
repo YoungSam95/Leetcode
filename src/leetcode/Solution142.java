@@ -1,19 +1,13 @@
 package leetcode;
 
+import common.ListNode;
+
 /**
  * 142.环形链表Ⅱ
  *     思路：当快慢指针相遇时，让其中任一个指针指向头节点，然后让它俩以相同速度前进，再次相遇时所在的节点位置就是环开始的位置。
+ *     第二次
  */
 public class Solution142 {
-
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 
     public static ListNode detectCycle(ListNode head) {
 
