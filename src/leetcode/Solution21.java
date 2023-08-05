@@ -1,17 +1,12 @@
 package leetcode;
 
+import common.ListNode;
+
 /**
  * 21 合并两个有序链表
+ * 第二次
  */
 public class Solution21 {
-
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if(list1 == null || list2 == null) return list1 != null ? list1 : list2;
