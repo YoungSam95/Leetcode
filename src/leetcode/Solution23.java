@@ -1,19 +1,14 @@
 package leetcode;
 
+import common.ListNode;
+
 import java.util.PriorityQueue;
 
 /**
  * 23.合并K个升序链表
+ * 第二次
  */
 public class Solution23 {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
 
     public static ListNode mergeKLists(ListNode[] lists) {
 
@@ -35,8 +30,9 @@ public class Solution23 {
             p = p.next;
         }
         return dummyHead.next;
-        /*//归并解法
-        return merge(lists,0,lists.length - 1);*/
+        /**归并解法
+        return merge(lists,0,lists.length - 1);
+        **/
 
     }
 
