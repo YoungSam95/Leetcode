@@ -5,8 +5,10 @@ import java.util.LinkedHashMap;
 
 /**
  * 146. LRU 缓存
+ * 第二次
  */
 public class Solution146 {
+
     class LRUCache {
         int capacity;
         LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<>();
@@ -46,5 +48,4 @@ public class Solution146 {
             cache.put(key,value);
         }
     }
-
 }
