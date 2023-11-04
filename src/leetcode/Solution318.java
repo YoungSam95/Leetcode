@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 318. 最大单词长度乘积
+ * 没懂位运算方法
  */
 public class Solution318 {
     public int maxProduct(String[] words) {
