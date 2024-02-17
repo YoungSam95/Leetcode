@@ -6,6 +6,7 @@ import java.util.*;
 
 /**
  * 429.N叉树的层序遍历
+ * 第二次
  */
 
 public class Solution429 {
