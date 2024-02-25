@@ -2,6 +2,10 @@ package leetcode;
 
 import common.TreeNode;
 
+/**
+ * 235. 二叉搜索树的最近公共祖先
+ * 第二次
+ */
 public class Solution235 {
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
