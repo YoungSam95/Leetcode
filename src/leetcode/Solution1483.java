@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 1483. 树节点的第 K 个祖先
+ * 第二次
  */
 public class Solution1483 {
     class TreeAncestor {
