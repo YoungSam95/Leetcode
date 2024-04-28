@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 1017. 负二进制转换
+ * 第二次
  */
 public class Solution1017 {
     public String baseNeg2(int n) {
