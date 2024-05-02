@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 
 /**
  * 857. 雇佣 K 名工人的最低成本
+ * 第二次
  */
 public class Solution857 {
     public double mincostToHireWorkers(int[] quality, int[] wage, int k) {
