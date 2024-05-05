@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 1652. 拆炸弹
+ * 第二次
  */
 public class Solution1652 {
     public int[] decrypt(int[] code, int k) {
