@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * 2951. 找出峰值
+ * 28
  */
 public class Solution2951 {
     public List<Integer> findPeaks(int[] mountain) {
