@@ -7,6 +7,7 @@ import java.util.Map;
 
 /**
  * 2982. 找出出现至少三次的最长特殊子字符串 II
+ * 30
  */
 public class Solution2982 {
     public int maximumLength(String s) {
