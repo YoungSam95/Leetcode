@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 522. 最长特殊序列 II
+ * 第二次
  */
 public class Solution522 {
     public int findLUSlength(String[] strs) {
