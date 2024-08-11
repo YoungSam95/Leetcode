@@ -5,6 +5,7 @@ import java.util.Set;
 
 /**
  * 676. 实现一个魔法字典
+ * 第二次
  */
 public class Solution676 {
     class MagicDictionary {
