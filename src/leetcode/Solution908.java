@@ -3,6 +3,7 @@ package leetcode;
 /**
  * 908.最小差值Ⅰ
  * 思路：看最值可否足够接近，可以就是0，不可以就是最小差值
+ * 第二次
  */
 public class Solution908 {
     public int smallestRangeI(int[] nums, int k) {
