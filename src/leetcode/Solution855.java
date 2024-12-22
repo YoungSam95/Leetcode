@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * 855. 考场就座
+ * 第二次
  */
 public class Solution855 {
     class ExamRoom {
