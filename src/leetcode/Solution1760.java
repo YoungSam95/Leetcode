@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 1760. 袋子里最少数目的球
+ * 第二次
  */
 public class Solution1760 {
     public int minimumSize(int[] nums, int maxOperations) {
