@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * 1742. 盒子中小球的最大数量
+ * 第二次
  */
 public class Solution1742 {
     public int countBalls(int lowLimit, int highLimit) {
