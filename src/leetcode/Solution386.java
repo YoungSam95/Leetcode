@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * 386. 字典序排数
+ * 第二次
  */
 public class Solution386 {
     public List<Integer> lexicalOrder(int n) {
