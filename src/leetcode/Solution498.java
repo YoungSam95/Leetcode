@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 498. 对角线遍历
+ * 第二次
  */
 public class Solution498 {
     public int[] findDiagonalOrder(int[][] mat) {
