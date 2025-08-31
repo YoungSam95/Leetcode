@@ -4,6 +4,7 @@ import java.util.PriorityQueue;
 
 /**
  * 1792. 最大平均通过率
+ * 第二次
  */
 public class Solution1792 {
     public double maxAverageRatio(int[][] classes, int extraStudents) {
