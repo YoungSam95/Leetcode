@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * 1039. 多边形三角剖分的最低得分
+ * 第二次
  */
 public class Solution1039 {
     int n;
