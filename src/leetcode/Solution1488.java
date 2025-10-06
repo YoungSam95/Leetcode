@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * 1488. 避免洪水泛滥
+ * 第二次
  */
 public class Solution1488 {
     public int[] avoidFlood(int[] rains) {
