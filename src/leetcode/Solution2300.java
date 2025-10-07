@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 2300. 咒语和药水的成功对数
+ * 第二次
  */
 public class Solution2300 {
     public int[] successfulPairs(int[] spells, int[] potions, long success) {
