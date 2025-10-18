@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 1625. 执行操作后字典序最小的字符串
+ * 第二次
  */
 public class Solution1625 {
     public String findLexSmallestString(String s, int a, int b) {
