@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 2048. 下一个更大的数值平衡数
+ * 第二次
  */
 public class Solution2048 {
     public int nextBeautifulNumber(int n) {
