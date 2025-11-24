@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * 1015. 可被 K 整除的最小整数
+ * 第二次
  */
 public class Solution1015 {
     public int smallestRepunitDivByK(int k) {
