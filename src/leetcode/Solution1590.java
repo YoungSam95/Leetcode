@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * 1590. 使数组和能被 P 整除
+ * 第二次
  */
 public class Solution1590 {
     public int minSubarray(int[] nums, int p) {
