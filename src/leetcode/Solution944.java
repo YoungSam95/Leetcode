@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  *944. 删列造序
+ * 第二次
  */
 public class Solution944 {
     public static int minDeletionSize(String[] strs) {
