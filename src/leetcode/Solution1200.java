@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * 1200. 最小绝对差
+ * 第二次
  */
 public class Solution1200 {
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
