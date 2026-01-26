@@ -5,39 +5,38 @@ import java.util.PriorityQueue;
 /**
  * 3510. 移除最小数对使数组有序 II
  */
-class Node {
-    long value;
-    int left;
-    Node prev;
-    Node next;
-
-    Node(int value, int left) {
-        this.value = value;
-        this.left = left;
-    }
-}
-
-class PQItem implements Comparable<PQItem> {
-    Node first;
-    Node second;
-    long cost;
-
-    PQItem(Node first, Node second, long cost) {
-        this.first = first;
-        this.second = second;
-        this.cost = cost;
-    }
-
-    @Override
-    public int compareTo(PQItem other) {
-        if (this.cost == other.cost) {
-            return this.first.left - other.first.left;
-        }
-        return this.cost < other.cost ? -1 : 1;
-    }
-}
-
 public class Solution3510 {
+    class Node {
+        long value;
+        int left;
+        Node prev;
+        Node next;
+
+        Node(int value, int left) {
+            this.value = value;
+            this.left = left;
+        }
+    }
+
+    class PQItem implements Comparable<PQItem> {
+        Node first;
+        Node second;
+        long cost;
+
+        PQItem(Node first, Node second, long cost) {
+            this.first = first;
+            this.second = second;
+            this.cost = cost;
+        }
+
+        @Override
+        public int compareTo(PQItem other) {
+            if (this.cost == other.cost) {
+                return this.first.left - other.first.left;
+            }
+            return this.cost < other.cost ? -1 : 1;
+        }
+    }
     public int minimumPairRemoval(int[] nums) {
         PriorityQueue<PQItem> pq = new PriorityQueue<>();
         boolean[] merged = new boolean[nums.length];
