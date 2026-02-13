@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 799. 香槟塔
+ * 第二次
  */
 public class Solution799 {
     public double champagneTower(int poured, int query_row, int query_glass) {
