@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 67.二进制求和
+ * 第二次
  */
 public class Solution67 {
     public static String addBinary(String a, String b) {
