@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * 761. 特殊的二进制序列
+ * 第二次
  */
 public class Solution761 {
     public String makeLargestSpecial(String s) {
