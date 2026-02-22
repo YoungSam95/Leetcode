@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 868.二进制间距
+ * 第二次
  */
 public class Solution868 {
 
