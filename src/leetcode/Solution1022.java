@@ -4,6 +4,7 @@ import common.TreeNode;
 
 /**
  * 1022. 从根到叶的二进制数之和
+ * 第二次
  */
 public class Solution1022 {
     int res = 0;
