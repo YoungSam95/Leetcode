@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 1582. 二进制矩阵中的特殊位置
+ * 第二次
  */
 public class Solution1582 {
     public int numSpecial(int[][] mat) {
