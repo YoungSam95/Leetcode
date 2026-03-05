@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 1784. 检查二进制字符串字段
+ * 第二次
  */
 public class Solution1784 {
     public boolean checkOnesSegment(String s) {
