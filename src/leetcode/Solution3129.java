@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 3129. 找出所有稳定的二进制数组 I
+ * 第二次
  */
 public class Solution3129 {
     public int numberOfStableArrays(int zero, int one, int limit) {
