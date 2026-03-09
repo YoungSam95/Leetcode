@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 3130. 找出所有稳定的二进制数组 II
+ * 第二次
  */
 public class Solution3130 {
     static final int MOD = 1000000007;
