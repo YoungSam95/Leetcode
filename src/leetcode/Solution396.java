@@ -3,6 +3,7 @@ package leetcode;
 /**
  * 396.旋转函数
  *  F(i) = F(i-1) + sum - n * A(n-i)
+ *  第二次
  */
 public class Solution396 {
 
