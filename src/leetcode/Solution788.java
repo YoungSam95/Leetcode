@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 788. 旋转数字
+ * 第二次
  */
 public class Solution788 {
     static int[] check = {0, 0, 1, -1, -1, 1, 1, -1, 0, 1};
