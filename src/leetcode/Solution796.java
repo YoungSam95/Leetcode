@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 796. 旋转字符串
+ * 第二次
  */
 
 public class Solution796 {
