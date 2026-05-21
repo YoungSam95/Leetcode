@@ -7,6 +7,7 @@ package leetcode;
  *    你的算法时间复杂度必须是 O(log n) 级别.
  * 解题思路：
  *    把数组分为两段，转眼看mid落在哪个段落，对每一段的有序数组进行二分查找；
+ *    第二次
  */
 public class Solution33 {
 
