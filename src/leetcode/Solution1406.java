@@ -1,0 +1,28 @@
+package leetcode;
+
+import java.util.Arrays;
+
+/**
+ * 1406. 石子游戏 III
+ */
+public class Solution1406 {
+    public String stoneGameIII(int[] stoneValue) {
+        int n = stoneValue.length;
+        int[] f = new int[n + 1];
+        Arrays.fill(f, Integer.MIN_VALUE);
+        // 边界情况，当没有石子时，分数为 0
+        f[n] = 0;
+        for (int i = n - 1; i >= 0; --i) {
+            int pre = 0;
+            for (int j = i + 1; j <= i + 3 && j <= n; ++j) {
+                pre += stoneValue[j - 1];
+                f[i] = Math.max(f[i], pre - f[j]);
+            }
+        }
+        if (f[0] == 0) {
+            return "Tie";
+        } else {
+            return f[0] > 0 ? "Alice" : "Bob";
+        }
+    }
+}
