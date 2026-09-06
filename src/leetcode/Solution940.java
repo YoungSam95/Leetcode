@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 940. 不同的子序列 II
+ * 第二次
  */
 public class Solution940 {
     public int distinctSubseqII(String s) {
