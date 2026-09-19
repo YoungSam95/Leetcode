@@ -1,0 +1,14 @@
+package leetcode;
+
+/**
+ * 3498. 字符串的反转度
+ */
+public class Solution3498 {
+    public int reverseDegree(String s) {
+        int ans = 0;
+        for (int i = 1; i <= s.length(); i++) {
+            ans += (26 - (s.charAt(i - 1) - 'a')) * i;
+        }
+        return ans;
+    }
+}
