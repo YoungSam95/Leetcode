@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 1658. 将 x 减到 0 的最小操作数
+ * 第二次
  */
 public class Solution1658 {
     public int minOperations(int[] nums, int x) {
