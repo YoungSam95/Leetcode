@@ -6,6 +6,7 @@ import java.util.Map;
 
 /**
  * 1807. 替换字符串中的括号内容
+ * 第二次
  */
 public class Solution1807 {
     public String evaluate(String s, List<List<String>> knowledge) {
