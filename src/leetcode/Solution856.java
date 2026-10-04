@@ -5,6 +5,7 @@ import java.util.Deque;
 
 /**
  * 856. 括号的分数
+ * 第二次
  */
 public class Solution856 {
     public int scoreOfParentheses(String s) {
