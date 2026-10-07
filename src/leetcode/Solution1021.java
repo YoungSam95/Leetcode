@@ -4,6 +4,7 @@ import java.util.Stack;
 
 /**
  * 1021. 删除最外层的括号
+ * 第二次
  */
 public class Solution1021 {
     public String removeOuterParentheses(String s) {
