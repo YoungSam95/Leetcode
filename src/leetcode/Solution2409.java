@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * 2409. 统计共同度过的日子数
+ * 第二次
  */
 public class Solution2409 {
     public int countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {
